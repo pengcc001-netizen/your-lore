@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#1A1410" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="50%" stop-color="#E6C66E"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#1A1410"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)"/>
+  <!-- Decorative corner flourishes -->
+  <path d="M60 60 L180 60 L180 70 L70 70 L70 180 L60 180 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <path d="M1140 60 L1020 60 L1020 70 L1130 70 L1130 180 L1140 180 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <path d="M60 570 L180 570 L180 560 L70 560 L70 450 L60 450 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <path d="M1140 570 L1020 570 L1020 560 L1130 560 L1130 450 L1140 450 Z" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <!-- Book emblem -->
+  <path d="M540 200 Q600 180 600 200 Q600 180 660 200 L660 280 Q600 260 600 280 Q600 260 540 280 Z" fill="none" stroke="#C9A84C" stroke-width="2" opacity="0.7"/>
+  <line x1="600" y1="200" x2="600" y2="280" stroke="#C9A84C" stroke-width="1.5" opacity="0.5"/>
+  <!-- Title -->
+  <text x="600" y="360" font-family="'Cinzel',Georgia,serif" font-size="92" font-weight="900" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="6">YOUR LORE</text>
+  <line x1="380" y1="392" x2="820" y2="392" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+  <text x="600" y="430" font-family="'Cinzel',Georgia,serif" font-size="22" font-style="italic" fill="#E8DCC8" text-anchor="middle" letter-spacing="2">Discover Your Character Archetype</text>
+  <text x="600" y="490" font-family="'JetBrains Mono',monospace" font-size="14" fill="#8A7B5C" text-anchor="middle" letter-spacing="6">8 ARCHETYPES · 12 QUESTIONS · YOUR EPIC BACKSTORY</text>
+  <text x="600" y="540" font-family="'JetBrains Mono',monospace" font-size="12" fill="#5A4A30" text-anchor="middle" letter-spacing="3">LORE.CSSKEY.COM</text>
+</svg>
