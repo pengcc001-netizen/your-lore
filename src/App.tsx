@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import ArchetypesPage from './pages/ArchetypesPage'
 import ArchetypeDetailPage from './pages/ArchetypeDetailPage'
 import AbilitiesPage from './pages/AbilitiesPage'
+import AbilityDetailPage from './pages/AbilityDetailPage'
 import BlogIndex from './pages/BlogIndex'
 import BlogPost from './pages/BlogPost'
 import StaticPage from './pages/StaticPage'
@@ -110,6 +111,7 @@ export default function App() {
         <Route path="/archetypes" element={<ArchetypesPage />} />
         <Route path="/archetypes/:slug" element={<ArchetypeDetailPage />} />
         <Route path="/abilities" element={<AbilitiesPage />} />
+        <Route path="/abilities/:slug" element={<AbilityDetailPage />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/about" element={<StaticPage page="about" />} />

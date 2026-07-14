@@ -5,6 +5,8 @@ function isValidRoute(pathname) {
   if (STATIC_PAGES.has(pathname)) return true;
   // /archetypes/archetype-slug
   if (/^\/archetypes\/[a-z0-9-]+$/.test(pathname)) return true;
+  // /abilities/ability-slug
+  if (/^\/abilities\/[a-z0-9-]+$/.test(pathname)) return true;
   // /blog/blog-slug
   if (/^\/blog\/[a-z0-9-]+$/.test(pathname)) return true;
   // /r/encoded-result (short shareable result links — noindex)
