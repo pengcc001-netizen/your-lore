@@ -19,6 +19,8 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, '') || '/';
     if (path !== url.pathname) return Response.redirect(url.origin + path, 301);
+    // IndexNow key file
+    if (path === '/4bc3c1da0c7245538ae78f032f1a717b.txt') return new Response('4bc3c1da0c7245538ae78f032f1a717b', { status: 200, headers: { 'content-type': 'text/plain' } });
 
     // Try to serve the exact static asset first
     let response = await env.ASSETS.fetch(request);
