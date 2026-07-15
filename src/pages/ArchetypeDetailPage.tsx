@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { archetypes } from '../data/archetypes'
 import ShareButtons from '../components/ShareButtons'
 import Ad from '../components/Ad'
@@ -9,7 +9,7 @@ const STAT_KEYS = ['strength', 'wisdom', 'charisma', 'cunning', 'resilience', 'm
 export default function ArchetypeDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const archetype = archetypes.find(a => a.slug === slug)
-  if (!archetype) return <Navigate to="/archetypes" replace />
+  if (!archetype) return <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}><Helmet><meta name="robots" content="noindex,nofollow" /></Helmet><h1 style={{ fontSize: 48, fontWeight: 800 }}>404</h1><p>Page not found</p><Link to="/" style={{ textDecoration: 'none', fontWeight: 600 }}>Go Home</Link></div>
   const url = `https://lore.csskey.com/archetypes/${archetype.slug}`
 
   return (

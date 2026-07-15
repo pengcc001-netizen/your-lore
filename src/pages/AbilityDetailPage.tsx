@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { useParams, Link, Navigate } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { abilities } from '../data/abilities'
 import { archetypes } from '../data/archetypes'
 import ShareButtons from '../components/ShareButtons'
@@ -8,7 +8,7 @@ import Ad from '../components/Ad'
 export default function AbilityDetailPage() {
   const { slug } = useParams<{ slug: string }>()
   const ability = abilities.find(a => a.slug === slug)
-  if (!ability) return <Navigate to="/abilities" replace />
+  if (!ability) return <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}><Helmet><meta name="robots" content="noindex,nofollow" /></Helmet><h1 style={{ fontSize: 48, fontWeight: 800 }}>404</h1><p>Page not found</p><Link to="/" style={{ textDecoration: 'none', fontWeight: 600 }}>Go Home</Link></div>
 
   const archetype = archetypes.find(a => a.slug === ability.archetypeSlug)
   const url = `https://lore.csskey.com/abilities/${ability.slug}`
