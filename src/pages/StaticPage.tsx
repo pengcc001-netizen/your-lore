@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 
 const PAGES: Record<string, { title: string; content: string }> = {
   about: { title: 'About', content: `## About Your Lore\n\nI built this site because character archetypes are how humans have always understood themselves. From the cave paintings of Lascaux to the latest anime, we tell stories about characters to understand who we are. Your Lore takes this ancient impulse and makes it personal.\n\nMy name is Elena Marchetti. I have been writing about mythology, archetypes, and narrative psychology for years. When I studied Carl Jung's work on the collective unconscious, I was struck by how universal character archetypes are. The Hero, the Trickster, the Mentor — these are not invented characters. They are patterns that emerge in every culture, every era, every story.\n\n### What You Will Find Here\n\n- 8 character archetypes with full backstories, abilities, and quests\n- A 12-question quiz that generates your character sheet\n- 40+ unique abilities across all archetypes\n- 6 character attributes (Strength, Wisdom, Charisma, Cunning, Resilience, Magic)\n- A blog about archetype psychology and character writing\n- Free to use, no sign-up\n\n### Why I Built This\n\nCharacter lore is more than entertainment. It is a mirror. When you read the backstory of The Chosen One, you see your own relationship with expectation. When you read about The Exile, you recognize your own experiences with rejection. The archetypes are not fiction. They are reflections.\n\n### Contact\n\nEmail: support@csskey.com` },
@@ -9,7 +10,17 @@ const PAGES: Record<string, { title: string; content: string }> = {
 
 export default function StaticPage({ page }: { page: string }) {
   const info = PAGES[page]
-  if (!info) return null
+  if (!info) return (
+      <div className="fade-in" style={{ maxWidth: 680, margin: '0 auto', padding: '60px 24px', textAlign: 'center' }}>
+        <Helmet>
+          <title>Page Not Found</title>
+          <meta name="robots" content="noindex,nofollow" />
+        </Helmet>
+        <h1 className="mono" style={{ fontSize: '1.5rem', marginBottom: 16 }}>404 - Page Not Found</h1>
+        <p style={{ marginBottom: 24, color: 'var(--text-soft)' }}>The page you are looking for does not exist.</p>
+        <Link to="/" style={{ color: 'var(--green)' }}>← Back to Home</Link>
+      </div>
+    )
   let isFirstParagraph = true
   const canonicalUrl = `https://lore.csskey.com/${page}`
 
