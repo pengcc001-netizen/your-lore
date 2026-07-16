@@ -21,7 +21,6 @@ export default function AbilityDetailPage() {
       <Helmet>
         <title>{ability.name} — Character Ability | Your Lore</title>
         <meta name="description" content={`${ability.name}: a signature ability of ${archetype?.name ?? 'an archetype'}. ${ability.description.slice(0, 140)}...`} />
-        <link rel="canonical" href={url} />
         <meta property="og:title" content={`${ability.name} — Character Ability | Your Lore`} />
         <meta property="og:description" content={`${ability.name}: a signature ability of ${archetype?.name ?? 'an archetype'}. ${ability.description.slice(0, 140)}...`} />
         <meta property="og:url" content={url} />

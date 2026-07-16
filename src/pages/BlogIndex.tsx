@@ -9,7 +9,6 @@ export default function BlogIndex() {
       <Helmet>
         <title>Lorekeeper Blog - Character Archetype Guides | Your Lore</title>
         <meta name="description" content={`Learn about character archetypes, storytelling, and the psychology of self-narrative. ${blogPosts.length} articles.`} />
-        <link rel="canonical" href="https://lore.csskey.com/blog" />
         <meta property="og:title" content="Lorekeeper Blog - Character Archetype Guides | Your Lore" />
         <meta property="og:description" content={`Learn about character archetypes, storytelling, and the psychology of self-narrative. ${blogPosts.length} articles.`} />
         <meta property="og:url" content="https://lore.csskey.com/blog" />

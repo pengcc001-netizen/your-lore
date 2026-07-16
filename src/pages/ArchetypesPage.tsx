@@ -9,7 +9,6 @@ export default function ArchetypesPage() {
       <Helmet>
         <title>All Character Archetypes - {archetypes.length} Types | Your Lore</title>
         <meta name="description" content={`Browse all ${archetypes.length} character archetypes — from The Chosen One to The Sovereign. Each with unique backstory, abilities, fatal flaw, and quest.`} />
-        <link rel="canonical" href="https://lore.csskey.com/archetypes" />
         <meta property="og:title" content={`All Character Archetypes - ${archetypes.length} Types | Your Lore`} />
         <meta property="og:description" content={`Browse all ${archetypes.length} character archetypes — from The Chosen One to The Sovereign. Each with unique backstory, abilities, fatal flaw, and quest.`} />
         <meta property="og:url" content="https://lore.csskey.com/archetypes" />

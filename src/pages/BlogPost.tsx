@@ -16,7 +16,6 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Your Lore</title>
         <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={url} />
         <meta property="og:title" content={`${post.title} | Your Lore`} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={url} />

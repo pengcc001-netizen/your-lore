@@ -13,7 +13,6 @@ export default function AbilitiesPage() {
       <Helmet>
         <title>All Character Abilities - {sorted.length} Unique Powers | Your Lore</title>
         <meta name="description" content={`Browse ${sorted.length}+ character abilities across all archetypes. From Divine Protection to Shadow Step, discover the powers of each archetype.`} />
-        <link rel="canonical" href="https://lore.csskey.com/abilities" />
         <meta property="og:title" content={`All Character Abilities - ${sorted.length} Unique Powers | Your Lore`} />
         <meta property="og:description" content={`Browse ${sorted.length}+ character abilities across all archetypes. From Divine Protection to Shadow Step, discover the powers of each archetype.`} />
         <meta property="og:url" content="https://lore.csskey.com/abilities" />

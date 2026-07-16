@@ -47,7 +47,6 @@ export default function Home() {
         <Helmet>
           <title>Your Lore - Discover Your Character Backstory [2026]</title>
           <meta name="description" content="Take the quiz and discover your character lore. 8 archetypes, unique backstories, abilities, fatal flaws, and quests. Free, no sign-up." />
-          <link rel="canonical" href="https://lore.csskey.com/" />
           <meta property="og:title" content="Your Lore - Discover Your Character Archetype" />
           <meta property="og:description" content="Discover your character archetype. 8 archetypes, 40 abilities, an epic personality quiz." />
           <meta property="og:url" content="https://lore.csskey.com/" />

@@ -29,7 +29,6 @@ export default function StaticPage({ page }: { page: string }) {
       <Helmet>
         <title>{info.title} - Your Lore</title>
         <meta name="description" content={`Your Lore ${info.title.toLowerCase()} page.`} />
-        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={`${info.title} - Your Lore`} />
         <meta property="og:description" content={`Your Lore ${info.title.toLowerCase()} page.`} />
         <meta property="og:url" content={canonicalUrl} />

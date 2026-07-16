@@ -17,7 +17,6 @@ export default function ArchetypeDetailPage() {
       <Helmet>
         <title>{archetype.name} - Character Archetype Guide | Your Lore</title>
         <meta name="description" content={`${archetype.name}: ${archetype.tagline} Backstory, abilities, fatal flaw, signature item, and quest.`} />
-        <link rel="canonical" href={url} />
         <meta property="og:title" content={`${archetype.name} - Character Archetype Guide | Your Lore`} />
         <meta property="og:description" content={`${archetype.name}: ${archetype.tagline} Backstory, abilities, fatal flaw, signature item, and quest.`} />
         <meta property="og:url" content={url} />
