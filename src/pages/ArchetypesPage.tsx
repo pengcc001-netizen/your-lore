@@ -10,7 +10,7 @@ export default function ArchetypesPage() {
         <title>All Character Archetypes - {archetypes.length} Types | Your Lore</title>
         <meta name="description" content={`Browse all ${archetypes.length} character archetypes — from The Chosen One to The Sovereign. Each with unique backstory, abilities, fatal flaw, and quest.`} />
       </Helmet>
-      <div className="eyebrow" style={{ marginBottom: 8 }}>Character Archetypes</div>
+      <h2 className="eyebrow" style={{ marginBottom: 8 }}>Character Archetypes</h2>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>The Archetypes</h1>
       <p style={{ color: 'var(--text-soft)', fontSize: 16, lineHeight: 1.7, maxWidth: 640, marginBottom: 40, fontFamily: 'var(--font-body)' }}>
         {archetypes.length} archetypes appear in every story ever told. Each has a unique backstory, set of abilities, fatal flaw, signature item, and quest. Discover which one matches you.

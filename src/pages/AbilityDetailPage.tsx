@@ -52,7 +52,7 @@ export default function AbilityDetailPage() {
 
       {/* Description */}
       <div className="gold-card" style={{ padding: '28px 32px', marginBottom: 24 }}>
-        <div className="eyebrow" style={{ marginBottom: 16 }}>The Lore</div>
+        <h2 className="eyebrow" style={{ marginBottom: 16 }}>The Lore</h2>
         <p className="dropcap" style={{ fontSize: 16, lineHeight: 1.8, color: 'var(--text)', fontFamily: 'var(--font-body)', textAlign: 'justify', margin: 0 }}>
           {ability.description}
         </p>
@@ -64,7 +64,7 @@ export default function AbilityDetailPage() {
           <div className="gold-card" style={{ padding: '24px 28px', marginBottom: 24, display: 'flex', alignItems: 'center', gap: 16 }}>
             <span style={{ fontSize: '2.25rem' }}>{archetype.emoji}</span>
             <div style={{ flex: 1 }}>
-              <div className="eyebrow" style={{ marginBottom: 4 }}>Belongs To</div>
+              <h2 className="eyebrow" style={{ marginBottom: 4 }}>Belongs To</h2>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>{archetype.name}</div>
               <div style={{ fontSize: 13, color: 'var(--text-soft)', fontStyle: 'italic', fontFamily: 'var(--font-body)', marginTop: 2 }}>"{archetype.tagline}"</div>
             </div>
@@ -78,7 +78,7 @@ export default function AbilityDetailPage() {
       {/* Related Abilities */}
       {relatedAbilities.length > 0 && (
         <div className="gold-card" style={{ padding: '28px 32px', marginBottom: 24 }}>
-          <div className="eyebrow" style={{ marginBottom: 16 }}>More from {archetype?.name ?? 'this archetype'}</div>
+          <h2 className="eyebrow" style={{ marginBottom: 16 }}>More from {archetype?.name ?? 'this archetype'}</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {relatedAbilities.map((rel, i) => (
               <Link key={rel.slug} to={`/abilities/${rel.slug}`} style={{ textDecoration: 'none' }}>

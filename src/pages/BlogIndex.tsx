@@ -10,7 +10,7 @@ export default function BlogIndex() {
         <title>Lorekeeper Blog - Character Archetype Guides | Your Lore</title>
         <meta name="description" content={`Learn about character archetypes, storytelling, and the psychology of self-narrative. ${blogPosts.length} articles.`} />
       </Helmet>
-      <div className="eyebrow" style={{ marginBottom: 8 }}>Lorekeeper</div>
+      <h2 className="eyebrow" style={{ marginBottom: 8 }}>Lorekeeper</h2>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>Guides & Lore</h1>
       <p style={{ color: 'var(--text-soft)', fontSize: 16, lineHeight: 1.7, maxWidth: 640, marginBottom: 40, fontFamily: 'var(--font-body)' }}>
         Deep dives into character archetypes, the psychology of self-narrative, and the art of writing character lore.

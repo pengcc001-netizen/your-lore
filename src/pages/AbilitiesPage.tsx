@@ -14,7 +14,7 @@ export default function AbilitiesPage() {
         <title>All Character Abilities - {sorted.length} Unique Powers | Your Lore</title>
         <meta name="description" content={`Browse ${sorted.length}+ character abilities across all archetypes. From Divine Protection to Shadow Step, discover the powers of each archetype.`} />
       </Helmet>
-      <div className="eyebrow" style={{ marginBottom: 8 }}>Ability Database</div>
+      <h2 className="eyebrow" style={{ marginBottom: 8 }}>Ability Database</h2>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>All Abilities</h1>
       <p style={{ color: 'var(--text-soft)', fontSize: 16, lineHeight: 1.7, maxWidth: 640, marginBottom: 40, fontFamily: 'var(--font-body)' }}>
         {sorted.length} unique abilities across {archetypes.length} archetypes. Each ability belongs to a specific character type and reflects their strengths.
