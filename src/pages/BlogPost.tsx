@@ -16,6 +16,12 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | Your Lore</title>
         <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={url} />
+        <meta property="og:title" content={`${post.title} | Your Lore`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": post.title, "description": post.excerpt, "url": url, "author": { "@type": "Person", "name": post.author }, "publisher": { "@type": "Organization", "name": "Your Lore" }, "datePublished": post.date, "dateModified": post.date, "mainEntityOfPage": url, "keywords": post.tags.join(', ') })}</script>
       </Helmet>
       <div style={{ marginBottom: 24 }}><Link to="/blog" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>← All Articles</Link></div>

@@ -11,10 +11,28 @@ export default function StaticPage({ page }: { page: string }) {
   const info = PAGES[page]
   if (!info) return null
   let isFirstParagraph = true
+  const canonicalPath = page === 'terms' ? 'legal-terms' : page
+  const canonicalUrl = `https://lore.csskey.com/${canonicalPath}`
 
   return (
     <div className="fade-in" style={{ maxWidth: 680, margin: '0 auto' }}>
-      <Helmet><title>{info.title} - Your Lore</title><meta name="description" content={`Your Lore ${info.title.toLowerCase()} page.`} /></Helmet>
+      <Helmet>
+        <title>{info.title} - Your Lore</title>
+        <meta name="description" content={`Your Lore ${info.title.toLowerCase()} page.`} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${info.title} - Your Lore`} />
+        <meta property="og:description" content={`Your Lore ${info.title.toLowerCase()} page.`} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": info.title,
+          "description": `Your Lore ${info.title.toLowerCase()} page.`,
+          "url": canonicalUrl
+        })}</script>
+      </Helmet>
       <article>
         {info.content.split('\n').map((line, i) => {
           if (line.startsWith('## ')) return <h1 key={i} style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--text)', marginBottom: 32, paddingBottom: 24, borderBottom: '1px solid var(--border)', letterSpacing: '-0.02em', lineHeight: 1.15 }}>{line.replace('## ', '')}</h1>

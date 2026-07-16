@@ -47,6 +47,12 @@ export default function Home() {
         <Helmet>
           <title>Your Lore - Discover Your Character Backstory [2026]</title>
           <meta name="description" content="Take the quiz and discover your character lore. 8 archetypes, unique backstories, abilities, fatal flaws, and quests. Free, no sign-up." />
+          <link rel="canonical" href="https://lore.csskey.com/" />
+          <meta property="og:title" content="Your Lore - Discover Your Character Archetype" />
+          <meta property="og:description" content="Discover your character archetype. 8 archetypes, 40 abilities, an epic personality quiz." />
+          <meta property="og:url" content="https://lore.csskey.com/" />
+          <meta property="og:type" content="website" />
+          <meta name="twitter:card" content="summary" />
           <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "WebApplication", "name": "Your Lore", "url": "https://lore.csskey.com", "applicationCategory": "EntertainmentApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "description": "Discover your character lore. Take the quiz and uncover your epic backstory, abilities, and quest." })}</script>
         </Helmet>
         <section style={{ textAlign: 'center', padding: '40px 0 60px' }}>

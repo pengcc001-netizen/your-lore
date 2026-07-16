@@ -9,6 +9,19 @@ export default function ArchetypesPage() {
       <Helmet>
         <title>All Character Archetypes - {archetypes.length} Types | Your Lore</title>
         <meta name="description" content={`Browse all ${archetypes.length} character archetypes — from The Chosen One to The Sovereign. Each with unique backstory, abilities, fatal flaw, and quest.`} />
+        <link rel="canonical" href="https://lore.csskey.com/archetypes" />
+        <meta property="og:title" content={`All Character Archetypes - ${archetypes.length} Types | Your Lore`} />
+        <meta property="og:description" content={`Browse all ${archetypes.length} character archetypes — from The Chosen One to The Sovereign. Each with unique backstory, abilities, fatal flaw, and quest.`} />
+        <meta property="og:url" content="https://lore.csskey.com/archetypes" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "All Character Archetypes",
+          "description": `Browse all ${archetypes.length} character archetypes — from The Chosen One to The Sovereign. Each with unique backstory, abilities, fatal flaw, and quest.`,
+          "url": "https://lore.csskey.com/archetypes"
+        })}</script>
       </Helmet>
       <h2 className="eyebrow" style={{ marginBottom: 8 }}>Character Archetypes</h2>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>The Archetypes</h1>

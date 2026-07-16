@@ -13,6 +13,19 @@ export default function AbilitiesPage() {
       <Helmet>
         <title>All Character Abilities - {sorted.length} Unique Powers | Your Lore</title>
         <meta name="description" content={`Browse ${sorted.length}+ character abilities across all archetypes. From Divine Protection to Shadow Step, discover the powers of each archetype.`} />
+        <link rel="canonical" href="https://lore.csskey.com/abilities" />
+        <meta property="og:title" content={`All Character Abilities - ${sorted.length} Unique Powers | Your Lore`} />
+        <meta property="og:description" content={`Browse ${sorted.length}+ character abilities across all archetypes. From Divine Protection to Shadow Step, discover the powers of each archetype.`} />
+        <meta property="og:url" content="https://lore.csskey.com/abilities" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "All Character Abilities",
+          "description": `Browse ${sorted.length}+ character abilities across all archetypes. From Divine Protection to Shadow Step, discover the powers of each archetype.`,
+          "url": "https://lore.csskey.com/abilities"
+        })}</script>
       </Helmet>
       <h2 className="eyebrow" style={{ marginBottom: 8 }}>Ability Database</h2>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>All Abilities</h1>

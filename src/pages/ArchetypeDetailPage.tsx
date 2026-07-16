@@ -17,6 +17,12 @@ export default function ArchetypeDetailPage() {
       <Helmet>
         <title>{archetype.name} - Character Archetype Guide | Your Lore</title>
         <meta name="description" content={`${archetype.name}: ${archetype.tagline} Backstory, abilities, fatal flaw, signature item, and quest.`} />
+        <link rel="canonical" href={url} />
+        <meta property="og:title" content={`${archetype.name} - Character Archetype Guide | Your Lore`} />
+        <meta property="og:description" content={`${archetype.name}: ${archetype.tagline} Backstory, abilities, fatal flaw, signature item, and quest.`} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": `${archetype.name} — Character Archetype`, "description": archetype.tagline, "url": url, "author": { "@type": "Person", "name": "Elena Marchetti" }, "publisher": { "@type": "Organization", "name": "Your Lore" } })}</script>
       </Helmet>
       <div style={{ marginBottom: 24 }}><Link to="/archetypes" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>← All Archetypes</Link></div>

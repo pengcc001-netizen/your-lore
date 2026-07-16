@@ -9,6 +9,19 @@ export default function BlogIndex() {
       <Helmet>
         <title>Lorekeeper Blog - Character Archetype Guides | Your Lore</title>
         <meta name="description" content={`Learn about character archetypes, storytelling, and the psychology of self-narrative. ${blogPosts.length} articles.`} />
+        <link rel="canonical" href="https://lore.csskey.com/blog" />
+        <meta property="og:title" content="Lorekeeper Blog - Character Archetype Guides | Your Lore" />
+        <meta property="og:description" content={`Learn about character archetypes, storytelling, and the psychology of self-narrative. ${blogPosts.length} articles.`} />
+        <meta property="og:url" content="https://lore.csskey.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Lorekeeper Blog",
+          "description": `Learn about character archetypes, storytelling, and the psychology of self-narrative. ${blogPosts.length} articles.`,
+          "url": "https://lore.csskey.com/blog"
+        })}</script>
       </Helmet>
       <h2 className="eyebrow" style={{ marginBottom: 8 }}>Lorekeeper</h2>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>Guides & Lore</h1>
