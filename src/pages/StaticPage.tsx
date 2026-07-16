@@ -11,8 +11,7 @@ export default function StaticPage({ page }: { page: string }) {
   const info = PAGES[page]
   if (!info) return null
   let isFirstParagraph = true
-  const canonicalPath = page === 'terms' ? 'legal-terms' : page
-  const canonicalUrl = `https://lore.csskey.com/${canonicalPath}`
+  const canonicalUrl = `https://lore.csskey.com/${page}`
 
   return (
     <div className="fade-in" style={{ maxWidth: 680, margin: '0 auto' }}>
