@@ -52,7 +52,7 @@ export default function Home() {
           <meta property="og:url" content="https://lore.csskey.com/" />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary" />
-          <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "WebApplication", "name": "Your Lore", "url": "https://lore.csskey.com", "applicationCategory": "EntertainmentApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "description": "Discover your character lore. Take the quiz and uncover your epic backstory, abilities, and quest." })}</script>
+          <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "WebApplication", "name": "Your Lore", "url": "https://lore.csskey.com/", "applicationCategory": "EntertainmentApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "description": "Discover your character lore. Take the quiz and uncover your epic backstory, abilities, and quest." })}</script>
         </Helmet>
         <section style={{ textAlign: 'center', padding: '40px 0 60px' }}>
           <h2 className="eyebrow" style={{ marginBottom: 16 }}>Character Lore Generator · 2026</h2>
