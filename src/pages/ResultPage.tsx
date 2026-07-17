@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { quizQuestions } from '../data/questions'
@@ -31,7 +31,7 @@ export default function ResultPage() {
   if (!decoded) {
     return (
       <div style={{ textAlign: 'center', padding: '60px 0' }}>
-        <Helmet><meta name="robots" content="noindex,nofollow" /></Helmet>
+        <Helmet><meta name="robots" content="noindex,nofollow" /><title>404 - Not Found | Your Lore</title></Helmet>
         <p style={{ color: 'var(--text-soft)', fontFamily: 'var(--font-mono)' }}>Invalid lore link.</p>
         <Link to="/" className="btn btn-gold" style={{ marginTop: 16 }}>Take the Quiz</Link>
       </div>
@@ -92,7 +92,7 @@ export default function ResultPage() {
       <div style={{ textAlign: 'center', marginBottom: 32 }}><ShareButtons url={shareUrl} title={`My character lore is ${archetype.name}! Discover yours:`} /></div>
       <Ad />
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
-        <Link to="/" className="btn btn-gold">Discover Your Own Lore →</Link>
+        <Link to="/" className="btn btn-gold">Discover Your Own Lore 鈫?/Link>
       </div>
     </div>
   )
