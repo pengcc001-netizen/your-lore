@@ -49,7 +49,15 @@ export default function ResultPage() {
 
   return (
     <div className="fade-in" style={{ maxWidth: 680, margin: '0 auto' }}>
-      <Helmet><title>{archetype.name} - Character Lore | Your Lore</title><meta name="robots" content="noindex,nofollow" /></Helmet>
+      <Helmet><title>{archetype.name} - Character Lore | Your Lore</title><meta name="robots" content="noindex,nofollow" />
+      <meta property="og:title" content={`My Character Archetype is ${archetype.name}!`} />
+      <meta property="og:description" content={archetype.tagline} />
+      <meta property="og:url" content={shareUrl} />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={`My Character: ${archetype.name}`} />
+      <meta name="twitter:description" content={archetype.tagline} />
+      </Helmet>
       <div className="gold-card gold-card-ornate" style={{ padding: '40px 32px', marginBottom: 32 }}>
         <div style={{ textAlign: 'center', marginBottom: 32 }}>
           <div className="mono" style={{ fontSize: 11, letterSpacing: '0.3em', color: 'var(--gold)', marginBottom: 8 }}>SHARED CHARACTER SHEET</div>
