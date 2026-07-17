@@ -34,6 +34,16 @@ export default function AbilityDetailPage() {
           "url": url,
           "author": { "@type": "Person", "name": "Elena Marchetti" },
           "publisher": { "@type": "Organization", "name": "Your Lore" },
+          "mainEntityOfPage": url
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lore.csskey.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Abilities", "item": "https://lore.csskey.com/abilities" },
+            { "@type": "ListItem", "position": 3, "name": ability.name, "item": url }
+          ]
         })}</script>
       </Helmet>
 

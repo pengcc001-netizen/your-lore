@@ -22,6 +22,7 @@ export default function BlogPost() {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": post.title, "description": post.excerpt, "url": url, "author": { "@type": "Person", "name": post.author }, "publisher": { "@type": "Organization", "name": "Your Lore" }, "datePublished": post.date, "dateModified": post.date, "mainEntityOfPage": url, "keywords": post.tags.join(', ') })}</script>
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lore.csskey.com/" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lore.csskey.com/blog" }, { "@type": "ListItem", "position": 3, "name": post.title, "item": url }] })}</script>
       </Helmet>
       <div style={{ marginBottom: 24 }}><Link to="/blog" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>鈫?All Articles</Link></div>
       <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>

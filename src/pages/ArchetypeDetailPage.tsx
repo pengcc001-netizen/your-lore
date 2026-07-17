@@ -22,7 +22,8 @@ export default function ArchetypeDetailPage() {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
-        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": `${archetype.name} 鈥?Character Archetype`, "description": archetype.tagline, "url": url, "author": { "@type": "Person", "name": "Elena Marchetti" }, "publisher": { "@type": "Organization", "name": "Your Lore" } })}</script>
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": `${archetype.name} 鈥?Character Archetype`, "description": archetype.tagline, "url": url, "author": { "@type": "Person", "name": "Elena Marchetti" }, "publisher": { "@type": "Organization", "name": "Your Lore" }, "mainEntityOfPage": url })}</script>
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lore.csskey.com/" }, { "@type": "ListItem", "position": 2, "name": "Archetypes", "item": "https://lore.csskey.com/archetypes" }, { "@type": "ListItem", "position": 3, "name": archetype.name, "item": url }] })}</script>
       </Helmet>
       <div style={{ marginBottom: 24 }}><Link to="/archetypes" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>鈫?All Archetypes</Link></div>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
