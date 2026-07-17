@@ -33,7 +33,7 @@ export default function Home() {
     } else {
       const totalStats: Record<string, number> = { strength: 0, wisdom: 0, charisma: 0, cunning: 0, resilience: 0, magic: 0 }
       newAnswers.forEach(a => { Object.entries(a.stats).forEach(([k, v]) => { totalStats[k] = (totalStats[k] || 0) + (v || 0) }) })
-      const encoded = btoa(JSON.stringify(newAnswers.map(a => a.optionIndex)))
+      const encoded = btoa(JSON.stringify(newAnswers.map(a => a.optionIndex))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
       window.history.replaceState(null, '', `/r/${encoded}`)
       setPhase('result')
     }

@@ -21,7 +21,9 @@ export default function ResultPage() {
 
   useEffect(() => {
     try {
-      const parsed = JSON.parse(atob(code || ''))
+      const std = (code || '').replace(/-/g, '+').replace(/_/g, '/')
+      const padded = std + '='.repeat((4 - std.length % 4) % 4)
+      const parsed = JSON.parse(atob(padded))
       if (Array.isArray(parsed) && parsed.length === quizQuestions.length) setDecoded(parsed)
     } catch { setDecoded(null) }
   }, [code])
