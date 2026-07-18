@@ -34,6 +34,7 @@ export default function AbilityDetailPage() {
           "url": url,
           "author": { "@type": "Person", "name": "Elena Marchetti" },
           "publisher": { "@type": "Organization", "name": "Your Lore" },
+          "datePublished": "2026-07-01",
           "mainEntityOfPage": url
         })}</script>
         <script type="application/ld+json">{JSON.stringify({
