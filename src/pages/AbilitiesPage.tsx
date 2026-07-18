@@ -26,7 +26,7 @@ export default function AbilitiesPage() {
           "url": "https://lore.csskey.com/abilities"
         })}</script>
       </Helmet>
-      <h2 className="eyebrow" style={{ marginBottom: 8 }}>Ability Database</h2>
+      <div className="eyebrow" $$$ >$$$</div>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 700, marginBottom: 16 }}>All Abilities</h1>
       <p style={{ color: 'var(--text-soft)', fontSize: 16, lineHeight: 1.7, maxWidth: 640, marginBottom: 40, fontFamily: 'var(--font-body)' }}>
         {sorted.length} unique abilities across {archetypes.length} archetypes. Each ability belongs to a specific character type and reflects their strengths.

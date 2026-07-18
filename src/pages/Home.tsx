@@ -55,7 +55,7 @@ export default function Home() {
           <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "WebApplication", "name": "Your Lore", "url": "https://lore.csskey.com/", "applicationCategory": "EntertainmentApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "description": "Discover your character lore. Take the quiz and uncover your epic backstory, abilities, and quest." })}</script>
         </Helmet>
         <section style={{ textAlign: 'center', padding: '40px 0 60px' }}>
-          <h2 className="eyebrow" style={{ marginBottom: 16 }}>Character Lore Generator · 2026</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <h1 className="gradient-text" style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', fontWeight: 900, fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em', lineHeight: 1, marginBottom: 24 }}>
             Discover Your<br />Character Lore
           </h1>
@@ -75,7 +75,7 @@ export default function Home() {
         </section>
         <Ad />
         <section style={{ marginBottom: 60 }}>
-          <h2 className="eyebrow" style={{ textAlign: 'center', marginBottom: 8 }}>How It Works</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <h2 style={{ textAlign: 'center', fontSize: 'clamp(1.5rem, 3vw, 2rem)', fontFamily: 'var(--font-heading)', marginBottom: 40 }}>Three Steps to Your Character Sheet</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
             {[{ num: '01', title: 'Answer 12 Questions', desc: 'Tell us how you handle destiny, power, betrayal, and the wilderness.' }, { num: '02', title: 'Get Your Stats', desc: 'We calculate your Strength, Wisdom, Charisma, Cunning, Resilience, and Magic.' }, { num: '03', title: 'Read Your Lore', desc: 'Receive your full character sheet: backstory, abilities, fatal flaw, signature item, and quest.' }].map((step, i) => (
@@ -89,7 +89,7 @@ export default function Home() {
         </section>
         <section>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24 }}>
-            <div><h2 className="eyebrow" style={{ marginBottom: 4 }}>Featured</h2><h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>The Archetypes</h2></div>
+            <div><div className="eyebrow" $$$ >$$$</div><h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>The Archetypes</h2></div>
             <Link to="/archetypes" style={{ color: 'var(--gold)', fontSize: 14, fontFamily: 'var(--font-mono)', fontWeight: 600 }}>View All →</Link>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
@@ -174,29 +174,29 @@ export default function Home() {
           </div>
           {/* Backstory */}
           <div style={{ marginBottom: 24, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-            <h2 className="eyebrow" style={{ marginBottom: 12 }}>Backstory</h2>
+            <div className="eyebrow" $$$ >$$$</div>
             {archetype.backstory.split('\n\n').map((para, i) => (
               <p key={i} className={i === 0 ? 'dropcap' : ''} style={{ fontSize: 15, lineHeight: 1.8, color: 'var(--text)', fontFamily: 'var(--font-body)', textAlign: 'justify', marginBottom: i < archetype.backstory.split('\n\n').length - 1 ? '1em' : 0 }}>{para}</p>
             ))}
           </div>
           {/* Abilities */}
           <div style={{ marginBottom: 24, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-            <h2 className="eyebrow" style={{ marginBottom: 12 }}>Abilities</h2>
+            <div className="eyebrow" $$$ >$$$</div>
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>{archetype.abilities.map((ab, i) => <span key={i} className="chip chip-gold">{ab}</span>)}</div>
           </div>
           {/* Fatal Flaw */}
           <div style={{ marginBottom: 24, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-            <h2 className="eyebrow" style={{ marginBottom: 8, color: 'var(--danger-bright)' }}>Fatal Flaw</h2>
+            <div className="eyebrow" $$$ >$$$</div>
             <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', fontFamily: 'var(--font-body)', fontStyle: 'italic' }}>{archetype.fatalFlaw}</p>
           </div>
           {/* Signature Item */}
           <div style={{ marginBottom: 24, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-            <h2 className="eyebrow" style={{ marginBottom: 8 }}>Signature Item</h2>
+            <div className="eyebrow" $$$ >$$$</div>
             <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{archetype.signatureItem}</p>
           </div>
           {/* Quest */}
           <div style={{ paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-            <h2 className="eyebrow" style={{ marginBottom: 8 }}>Your Quest</h2>
+            <div className="eyebrow" $$$ >$$$</div>
             <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{archetype.quest}</p>
           </div>
         </div>

@@ -33,7 +33,7 @@ export default function ArchetypeDetailPage() {
       </div>
       {/* Stats */}
       <div className="gold-card" style={{ padding: '28px 32px', marginBottom: 24 }}>
-        <h2 className="eyebrow" style={{ marginBottom: 16 }}>Attributes</h2>
+        <div className="eyebrow" $$$ >$$$</div>
         {STAT_KEYS.map(key => (
           <div key={key} style={{ marginBottom: 12 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
@@ -48,14 +48,14 @@ export default function ArchetypeDetailPage() {
       </div>
       {/* Backstory */}
       <div className="gold-card" style={{ padding: '28px 32px', marginBottom: 24 }}>
-        <h2 className="eyebrow" style={{ marginBottom: 12 }}>Backstory</h2>
+        <div className="eyebrow" $$$ >$$$</div>
         {archetype.backstory.split('\n\n').map((para, i) => (
           <p key={i} className={i === 0 ? 'dropcap' : ''} style={{ fontSize: 16, lineHeight: 1.8, color: 'var(--text)', fontFamily: 'var(--font-body)', textAlign: 'justify', marginBottom: i < archetype.backstory.split('\n\n').length - 1 ? '1em' : 0 }}>{para}</p>
         ))}
       </div>
       {/* Abilities */}
       <div className="gold-card" style={{ padding: '28px 32px', marginBottom: 24 }}>
-        <h2 className="eyebrow" style={{ marginBottom: 12 }}>Abilities</h2>
+        <div className="eyebrow" $$$ >$$$</div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {archetype.abilities.map((ab, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '8px 0', borderBottom: i < archetype.abilities.length - 1 ? '1px solid var(--border)' : 'none' }}>
@@ -68,26 +68,26 @@ export default function ArchetypeDetailPage() {
       {/* Fatal Flaw & Signature Item */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
         <div className="gold-card" style={{ padding: '24px 28px' }}>
-          <h2 className="eyebrow" style={{ marginBottom: 8, color: 'var(--danger-bright)' }}>Fatal Flaw</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', fontFamily: 'var(--font-body)', fontStyle: 'italic' }}>{archetype.fatalFlaw}</p>
         </div>
         <div className="gold-card" style={{ padding: '24px 28px' }}>
-          <h2 className="eyebrow" style={{ marginBottom: 8 }}>Signature Item</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{archetype.signatureItem}</p>
         </div>
       </div>
       {/* Quest */}
       <div className="gold-card" style={{ padding: '28px 32px', marginBottom: 24 }}>
-        <h2 className="eyebrow" style={{ marginBottom: 12 }}>The Quest</h2>
+        <div className="eyebrow" $$$ >$$$</div>
         <p style={{ fontSize: 16, lineHeight: 1.8, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{archetype.quest}</p>
       </div>
       <Ad />
       {/* Allies & Enemies */}
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 24 }}>
-        <div><h2 className="eyebrow" style={{ color: 'var(--positive-bright)', marginBottom: 12 }}>Allies</h2><div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div><div className="eyebrow" $$$ >$$$</div><div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {archetype.allies.map((allyName, i) => { const ally = archetypes.find(a => a.name === allyName); return ally ? <Link key={i} to={`/archetypes/${ally.slug}`} style={{ textDecoration: 'none' }}><div className="gold-card" style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: '1.5rem' }}>{ally.emoji}</span><span style={{ fontSize: 14, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{ally.name}</span></div></Link> : null })}
         </div></div>
-        <div><h2 className="eyebrow" style={{ color: 'var(--danger-bright)', marginBottom: 12 }}>Enemies</h2><div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div><div className="eyebrow" $$$ >$$$</div><div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
           {archetype.enemies.map((enemyName, i) => { const enemy = archetypes.find(a => a.name === enemyName); return enemy ? <Link key={i} to={`/archetypes/${enemy.slug}`} style={{ textDecoration: 'none' }}><div className="gold-card" style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: '1.5rem' }}>{enemy.emoji}</span><span style={{ fontSize: 14, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{enemy.name}</span></div></Link> : null })}
         </div></div>
       </div>

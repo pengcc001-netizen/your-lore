@@ -42,7 +42,7 @@ export default function BlogPost() {
       <div style={{ marginTop: 32, marginBottom: 40 }}><ShareButtons url={url} title={post.title} /></div>
       {related.length > 0 && (
         <section>
-          <h2 className="eyebrow" style={{ marginBottom: 12 }}>Keep Reading</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {related.map(p => (<Link key={p.slug} to={`/blog/${p.slug}`} style={{ textDecoration: 'none' }}><div className="gold-card" style={{ padding: '16px 20px' }}><div className="mono" style={{ fontSize: 10, color: 'var(--text-faint)', letterSpacing: '0.1em', marginBottom: 4 }}>{p.date}</div><div style={{ fontSize: 14, color: 'var(--text)', fontFamily: 'var(--font-body)', fontWeight: 600 }}>{p.title}</div></div></Link>))}
           </div>

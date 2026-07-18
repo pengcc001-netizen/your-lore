@@ -83,17 +83,17 @@ export default function ResultPage() {
           ))}
         </div>
         <div style={{ marginBottom: 24, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-          <h2 className="eyebrow" style={{ marginBottom: 12 }}>Backstory</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           {archetype.backstory.split('\n\n').map((para, i) => (
             <p key={i} style={{ fontSize: 15, lineHeight: 1.8, color: 'var(--text)', fontFamily: 'var(--font-body)', textAlign: 'justify', marginBottom: i < archetype.backstory.split('\n\n').length - 1 ? '1em' : 0 }}>{para}</p>
           ))}
         </div>
         <div style={{ marginBottom: 24, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-          <h2 className="eyebrow" style={{ marginBottom: 12 }}>Abilities</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>{archetype.abilities.map((ab, i) => <span key={i} className="chip chip-gold">{ab}</span>)}</div>
         </div>
         <div style={{ paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-          <h2 className="eyebrow" style={{ marginBottom: 8, color: 'var(--danger-bright)' }}>Fatal Flaw</h2>
+          <div className="eyebrow" $$$ >$$$</div>
           <p style={{ fontSize: 14, lineHeight: 1.7, color: 'var(--text)', fontFamily: 'var(--font-body)', fontStyle: 'italic' }}>{archetype.fatalFlaw}</p>
         </div>
       </div>
