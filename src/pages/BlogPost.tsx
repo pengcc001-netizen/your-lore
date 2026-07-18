@@ -1,4 +1,4 @@
-﻿import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { blogPosts } from '../data/blog'
 import ShareButtons from '../components/ShareButtons'
@@ -24,10 +24,10 @@ export default function BlogPost() {
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": post.title, "description": post.excerpt, "url": url, "author": { "@type": "Person", "name": post.author }, "publisher": { "@type": "Organization", "name": "Your Lore" }, "datePublished": post.date, "dateModified": post.date, "mainEntityOfPage": url, "keywords": post.tags.join(', ') })}</script>
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lore.csskey.com/" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lore.csskey.com/blog" }, { "@type": "ListItem", "position": 3, "name": post.title, "item": url }] })}</script>
       </Helmet>
-      <div style={{ marginBottom: 24 }}><Link to="/blog" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>鈫?All Articles</Link></div>
+      <div style={{ marginBottom: 24 }}><Link to="/blog" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>→All Articles</Link></div>
       <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
         <span className="chip chip-gold">{post.category}</span>
-        <span className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', letterSpacing: '0.1em', alignSelf: 'center' }}>{post.date} 路 BY {post.author.toUpperCase()}</span>
+        <span className="mono" style={{ fontSize: 11, color: 'var(--text-faint)', letterSpacing: '0.1em', alignSelf: 'center' }}>{post.date} · BY {post.author.toUpperCase()}</span>
       </div>
       <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, lineHeight: 1.2, marginBottom: 16, color: 'var(--text)' }}>{post.title}</h1>
       <p style={{ fontSize: 16, color: 'var(--text-soft)', lineHeight: 1.7, marginBottom: 32, fontStyle: 'italic', fontFamily: 'var(--font-body)' }}>{post.excerpt}</p>

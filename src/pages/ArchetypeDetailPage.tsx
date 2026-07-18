@@ -1,4 +1,4 @@
-﻿import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { archetypes } from '../data/archetypes'
 import ShareButtons from '../components/ShareButtons'
@@ -22,10 +22,10 @@ export default function ArchetypeDetailPage() {
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
-        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": `${archetype.name} 鈥?Character Archetype`, "description": archetype.tagline, "url": url, "author": { "@type": "Person", "name": "Elena Marchetti" }, "publisher": { "@type": "Organization", "name": "Your Lore" }, "mainEntityOfPage": url })}</script>
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Article", "headline": `${archetype.name} —Character Archetype`, "description": archetype.tagline, "url": url, "author": { "@type": "Person", "name": "Elena Marchetti" }, "publisher": { "@type": "Organization", "name": "Your Lore" }, "mainEntityOfPage": url })}</script>
         <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lore.csskey.com/" }, { "@type": "ListItem", "position": 2, "name": "Archetypes", "item": "https://lore.csskey.com/archetypes" }, { "@type": "ListItem", "position": 3, "name": archetype.name, "item": url }] })}</script>
       </Helmet>
-      <div style={{ marginBottom: 24 }}><Link to="/archetypes" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>鈫?All Archetypes</Link></div>
+      <div style={{ marginBottom: 24 }}><Link to="/archetypes" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>→All Archetypes</Link></div>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div style={{ fontSize: '4rem', marginBottom: 16 }}>{archetype.emoji}</div>
         <h1 className="gradient-text" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 5vw, 2.75rem)', fontWeight: 800, marginBottom: 8 }}>{archetype.name}</h1>
@@ -91,7 +91,7 @@ export default function ArchetypeDetailPage() {
           {archetype.enemies.map((enemyName, i) => { const enemy = archetypes.find(a => a.name === enemyName); return enemy ? <Link key={i} to={`/archetypes/${enemy.slug}`} style={{ textDecoration: 'none' }}><div className="gold-card" style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: 8 }}><span style={{ fontSize: '1.5rem' }}>{enemy.emoji}</span><span style={{ fontSize: 14, color: 'var(--text)', fontFamily: 'var(--font-body)' }}>{enemy.name}</span></div></Link> : null })}
         </div></div>
       </div>
-      <div style={{ marginTop: 32 }}><ShareButtons url={url} title={`${archetype.name} 鈥?${archetype.tagline}`} /></div>
+      <div style={{ marginTop: 32 }}><ShareButtons url={url} title={`${archetype.name} —${archetype.tagline}`} /></div>
     </div>
   )
 }

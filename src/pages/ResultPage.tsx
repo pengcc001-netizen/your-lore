@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { quizQuestions } from '../data/questions'
@@ -100,7 +100,7 @@ export default function ResultPage() {
       <div style={{ textAlign: 'center', marginBottom: 32 }}><ShareButtons url={shareUrl} title={`My character lore is ${archetype.name}! Discover yours:`} /></div>
       <Ad />
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
-        <Link to="/" className="btn btn-gold">Discover Your Own Lore 鈫?/Link>
+        <Link to="/" className="btn btn-gold">Discover Your Own Lore →/Link>
       </div>
     </div>
   )

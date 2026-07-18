@@ -1,4 +1,4 @@
-﻿import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import { useParams, Link } from 'react-router-dom'
 import { abilities } from '../data/abilities'
 import { archetypes } from '../data/archetypes'
@@ -19,9 +19,9 @@ export default function AbilityDetailPage() {
   return (
     <div className="fade-in" style={{ maxWidth: 680, margin: '0 auto' }}>
       <Helmet>
-        <title>{ability.name} 鈥?Character Ability | Your Lore</title>
+        <title>{ability.name} —Character Ability | Your Lore</title>
         <meta name="description" content={`${ability.name}: a signature ability of ${archetype?.name ?? 'an archetype'}. ${ability.description.slice(0, 140)}...`} />
-        <meta property="og:title" content={`${ability.name} 鈥?Character Ability | Your Lore`} />
+        <meta property="og:title" content={`${ability.name} —Character Ability | Your Lore`} />
         <meta property="og:description" content={`${ability.name}: a signature ability of ${archetype?.name ?? 'an archetype'}. ${ability.description.slice(0, 140)}...`} />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
@@ -29,7 +29,7 @@ export default function AbilityDetailPage() {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": `${ability.name} 鈥?Character Ability`,
+          "headline": `${ability.name} —Character Ability`,
           "description": ability.description.slice(0, 200),
           "url": url,
           "author": { "@type": "Person", "name": "Elena Marchetti" },
@@ -48,7 +48,7 @@ export default function AbilityDetailPage() {
       </Helmet>
 
       <div style={{ marginBottom: 24 }}>
-        <Link to="/abilities" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>鈫?All Abilities</Link>
+        <Link to="/abilities" style={{ color: 'var(--text-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>→All Abilities</Link>
       </div>
 
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
@@ -83,7 +83,7 @@ export default function AbilityDetailPage() {
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>{archetype.name}</div>
               <div style={{ fontSize: 13, color: 'var(--text-soft)', fontStyle: 'italic', fontFamily: 'var(--font-body)', marginTop: 2 }}>"{archetype.tagline}"</div>
             </div>
-            <span style={{ color: 'var(--gold)', fontSize: 20 }}>鈫?/span>
+            <span style={{ color: 'var(--gold)', fontSize: 20 }}>→/span>
           </div>
         </Link>
       )}
@@ -116,7 +116,7 @@ export default function AbilityDetailPage() {
       )}
 
       <div style={{ marginTop: 32 }}>
-        <ShareButtons url={url} title={`${ability.name} 鈥?Character Ability | Your Lore`} />
+        <ShareButtons url={url} title={`${ability.name} —Character Ability | Your Lore`} />
       </div>
     </div>
   )
