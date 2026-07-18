@@ -23,14 +23,15 @@ export default function StaticPage({ page }: { page: string }) {
     )
   let isFirstParagraph = true
   const canonicalUrl = `https://lore.csskey.com/${page}`
+  const pageDescription = info.content.substring(0, 155).replace(/\n/g, ' ').replace(/[#*]/g, '').trim()
 
   return (
     <div className="fade-in" style={{ maxWidth: 680, margin: '0 auto' }}>
       <Helmet>
         <title>{info.title} - Your Lore</title>
-        <meta name="description" content={`Your Lore ${info.title.toLowerCase()} page.`} />
+        <meta name="description" content={pageDescription} />
         <meta property="og:title" content={`${info.title} - Your Lore`} />
-        <meta property="og:description" content={`Your Lore ${info.title.toLowerCase()} page.`} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
@@ -38,7 +39,7 @@ export default function StaticPage({ page }: { page: string }) {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": info.title,
-          "description": `Your Lore ${info.title.toLowerCase()} page.`,
+          "description": pageDescription,
           "url": canonicalUrl
         })}</script>
       </Helmet>
