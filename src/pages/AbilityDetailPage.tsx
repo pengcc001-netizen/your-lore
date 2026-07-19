@@ -84,7 +84,7 @@ export default function AbilityDetailPage() {
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>{archetype.name}</div>
               <div style={{ fontSize: 13, color: 'var(--text-soft)', fontStyle: 'italic', fontFamily: 'var(--font-body)', marginTop: 2 }}>"{archetype.tagline}"</div>
             </div>
-            <span style={{ color: 'var(--gold)', fontSize: 20 }}>→/span>
+            <span style={{ color: 'var(--gold)', fontSize: 20 }}>→</span>
           </div>
         </Link>
       )}
