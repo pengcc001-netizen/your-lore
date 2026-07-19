@@ -1,4 +1,4 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom'
+﻿import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { useEffect, useState } from 'react'
 import { archetypes } from './data/archetypes'
@@ -12,6 +12,7 @@ import BlogPost from './pages/BlogPost'
 import StaticPage from './pages/StaticPage'
 import ResultPage from './pages/ResultPage'
 import Ad from './components/Ad'
+import CookieConsent from './components/CookieConsent'
 
 function NotFound() {
   return (
@@ -99,6 +100,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
       <style>{`@media (max-width: 860px) { .nav-desktop { display: none !important; } .menu-toggle { display: flex !important; } }`}</style>
+      <CookieConsent />
     </div>
   )
 }
