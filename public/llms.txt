@@ -1,0 +1,27 @@
+# Your Lore
+
+> Personal story and lore generator for creative writing, character building, and roleplay.
+
+## Main Pages
+- [Home](https://lore.csskey.com/)
+- [About](https://lore.csskey.com/about)
+- [Privacy Policy](https://lore.csskey.com/privacy)
+- [Terms of Service](https://lore.csskey.com/terms)
+- [Contact](https://lore.csskey.com/contact)
+
+## Features
+- Lore generation
+- Character backstories
+- World building
+- Plot ideas
+- Creative prompts
+
+## Topics
+- lore
+- storytelling
+- character building
+- creative writing
+- world building
+
+## Sitemap
+https://lore.csskey.com/sitemap.xml
