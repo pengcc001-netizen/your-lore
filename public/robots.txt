@@ -28,4 +28,5 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+IndexNow: https://lore.csskey.com/7517a6ed60632155180920c1618c00e9.txt
 Sitemap: https://lore.csskey.com/sitemap.xml
